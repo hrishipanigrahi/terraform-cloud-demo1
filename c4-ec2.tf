@@ -4,7 +4,7 @@ resource "aws_instance" "web-ec2" {
   instance_type = var.instance_type
   key_name      = "new-key"
   user_data     = file("apache.sh")
-  count         = 1
+  count         = 2
   tags = {
     Name = "web-ec2-${count.index}"
   }
